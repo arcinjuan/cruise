@@ -5,32 +5,48 @@ import './App.css';
 class App extends Component {
 	constructor(props){
 		super(props);
-		this.splitDaysArray = this.splitDaysArray.bind(this);
+		this.removeDayFromArray = this.removeDayFromArray.bind(this);
 	}
-  splitDaysArray(day) {
+  removeDayFromArray(day) {
 		console.log(day)
 	}
 
   render(){
   	let days = [
   		{
-  			port: 'Singapore',
+  			port: 'Singapore, Singapore',
   			date: '11/23/2018'
   		},
   		{
-  			port: 'Singapore',
+  			port: 'Singapore, Singapore',
   			date: '11/24/2018'
   		},
   		{
-  			port: 'Penang',
+  			port: 'Penang, Malaysia',
   			date: '11/25/2018'
+  		},
+  		{
+  			port: 'Langkawi, Malaysia',
+  			date: '11/26/2018'
+  		},
+  		{
+  			port: 'Phuket, Thailand',
+  			date: '11/27/2018'
+  		},
+  		{
+  			port: 'Sea Day',
+  			date: '11/28/2018'
+  		},
+  		{
+  			port: 'Singapore, Singapore',
+  			date: '11/29/2018'
   		}
   	]
 
     return (
       <div className="row">
       	{days.map(function(day, index){
-      		return <Card port={day.port} date={day.date} cardId={index} deleteDay={day => this.splitDaysArray(day)} key={index} />
+      		return <Card port={day.port} date={day.date} cardId={index} deleteDay={day => this.removeDayFromArray(day)} key={index} />
       	})}
       </div>
     );
