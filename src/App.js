@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Card from './Card';
 import './App.css';
 
 class App extends Component {
-  render() {
+	constructor(props){
+		super(props);
+		this.splitDaysArray = this.splitDaysArray.bind(this);
+	}
+  splitDaysArray(day) {
+		console.log(day)
+	}
+
+  render(){
+  	let days = [
+  		{
+  			port: 'Singapore',
+  			date: '11/23/2018'
+  		},
+  		{
+  			port: 'Singapore',
+  			date: '11/24/2018'
+  		},
+  		{
+  			port: 'Penang',
+  			date: '11/25/2018'
+  		}
+  	]
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="row">
+      	{days.map(function(day, index){
+      		return <Card port={day.port} date={day.date} cardId={index} deleteDay={day => this.splitDaysArray(day)} key={index} />
+      	})}
       </div>
     );
   }
