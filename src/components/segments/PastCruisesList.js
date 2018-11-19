@@ -25,7 +25,7 @@ class PastCruisesList extends Component {
     return (
       <div>
         <div className="addNewDayIcon text-center small-12 columns">
-          <NavLink exact to="/add-day">
+          <NavLink exact to="/add-trip">
             <i className="fas fa-plus-circle"></i><br />
             Add New Cruise
           </NavLink>

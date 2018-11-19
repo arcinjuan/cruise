@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PortCard from './PortCard';
 import SeaDayCard from './SeaDayCard';
 import { Link } from "react-router-dom";
-import '../css/individual-day.css'
+import '../../css/individual-day.css'
 
 class PastCruiseCard extends Component {
 	constructor(props){

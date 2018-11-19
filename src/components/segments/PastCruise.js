@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PastCruiseCard from './PastCruiseCard';
+import PastCruiseCard from '../cards/PastCruiseCard';
 import { Redirect } from 'react-router'
 
 
@@ -12,7 +12,7 @@ class PastCruise extends Component {
   }
 
   componentWillMount(){
-    this.setState({cruise: this.props.selectedCruise}, console.log(this.state.cruise))
+    this.setState({cruise: this.props.selectedCruise})
   }
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import SavedCruises from './savedCruises';
+import SavedCruises from '../json/savedCruises';
 
 class PastCruisesList extends Component {
   constructor(props){
