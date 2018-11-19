@@ -1,0 +1,71 @@
+/* Port Selection */
+.portSelection div{
+	margin:0;
+	padding:0;
+	border:none;
+	color:#555;
+}
+.portSelection{
+	padding-top:10px;
+	width:100%;
+}
+.portSelection div input[type="text"]{
+	background:#ccc;
+	border-bottom:none!important;
+	max-height:30px;
+	margin-bottom:0;
+	margin-padding:25px;
+	width:100%;
+	border:1px solid #333;
+	box-shadow: none!important;
+	outline: none;
+}
+#dateSelection, #portSelection{
+	border-bottom:1px solid #ccc;
+}
+
+.css-2o5izw{
+	border:none!important;
+	box-shadow: none!important;
+}
+.css-1wy0on6{
+	visibility:hidden;
+}
+
+.DayPickerInput{
+	margin-top:15px;
+	width:100%;
+}
+
+.DayPickerInput input{
+	border: none;
+	color:#555;
+	width:100%;
+	box-shadow: none;
+	outline: none;
+}
+.DayPickerInput input:focus, .portSelection div input[type="text"]:focus{
+	box-shadow: none!important;
+	outline: none;
+}
+
+button.addCardButton{
+  box-shadow: none!important;
+  outline: none;
+  background: #0f6ba0;
+  padding: 10px 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+  color: #fff;
+  transition: background .3s ease;
+}
+
+button.addCardButton:hover{
+	background:#168dd2;
+}
+
+.input-range__slider, .input-range__track--active {
+    background: #fab100!important;
+    border: 1px solid #fab100!important;
+}
+
