@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import SavedCruises from './savedCruises';
-import PastCruise from './PastCruise';
-import CruiseList from './CruiseList';
-import { Route, Switch, NavLink} from "react-router-dom";
 
 class PastCruisesList extends Component {
   constructor(props){

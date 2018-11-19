@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PastCruiseCard from './PastCruiseCard';
+import { Redirect } from 'react-router'
+
 
 class PastCruise extends Component {
   constructor(props){
@@ -13,19 +15,31 @@ class PastCruise extends Component {
     this.setState({cruise: this.props.selectedCruise}, console.log(this.state.cruise))
   }
 
+
+
   render(){
     return (
-      <PastCruiseCard
-        title={this.props.selectedCruise.tripName}
-        cruiseLine={this.props.selectedCruise.cruiseLine}
-        ship={this.props.selectedCruise.ship}
-        day={this.props.selectedCruise.date}
-        ports={this.props.selectedCruise.ports} 
-       />
+      <CheckIfCruiseIsSelected cruiseIsSelected={this.props.selectedCruise} />
+
     );
   }
 }
 
-
+function CheckIfCruiseIsSelected(props){
+  const CruiseIsSelected = props.cruiseIsSelected
+  if(CruiseIsSelected){
+    return <PastCruiseCard
+      title={CruiseIsSelected.tripName}
+      cruiseLine={CruiseIsSelected.cruiseLine}
+      ship={CruiseIsSelected.ship}
+      day={CruiseIsSelected.date}
+      ports={CruiseIsSelected.ports} 
+     />
+   } else {
+    return <Redirect to="/"/>
+   }
+}
 
 export default PastCruise;
+      
+
