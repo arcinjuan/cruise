@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "../css/tabs.css";
-import AddSeaDayForm from './AddSeaDayForm';
-import AddPortForm from './AddPortForm';
-import PortCard from './PortCard';
-import SeaDayCard from './SeaDayCard';
+import AddSeaDayForm from '../forms/AddSeaDayForm';
+import AddPortForm from '../forms/AddPortForm';
+import PortCard from '../cards/PortCard';
+import SeaDayCard from '../cards/SeaDayCard';
 import scrollToComponent from 'react-scroll-to-component';
 import { Link } from "react-router-dom";
+
+
+import "../../css/tabs.css";
 
 class AddDay extends Component {
   constructor(props){
@@ -28,7 +30,6 @@ class AddDay extends Component {
             if(day.port === 'Sea Day'){
               return <SeaDayCard port={day.port} day={day.date} schedule={day.schedule} cardId={index} deleteDay={this.removeDayFromArray} key={index} />
             } else {
-              console.log('made it')
               return <PortCard port={day.port} day={day.date} schedule={day.schedule} cardId={index} deleteDay={this.removeDayFromArray} key={index} />
             }
           })}

@@ -5,7 +5,6 @@ class PortCard extends Component {
     super(props);
     this.removeCard = this.removeCard.bind(this);
     this.currentDay = this.props.cardId + 1;
-    console.log(this.props)
   }
   render() {
     return (

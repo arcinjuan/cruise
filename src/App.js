@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AddDay from './components/AddDay';
-import Home from './components/Home';
+import AddTrip from './components/segments/AddTrip';
+import Home from './components/segments/Home';
 import {Route, Switch } from "react-router-dom";
 import './App.css';
 
@@ -23,7 +23,7 @@ class App extends Component {
     return (
 	      <div className="row cards">
           <Switch>
-            <Route path="/add-day" component={AddDay} /> 
+            <Route path="/add-trip" component={AddTrip} /> 
             <Route path="/" component={Home} />
           </Switch>
 	      </div>

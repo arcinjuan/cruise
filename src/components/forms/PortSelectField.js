@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Ports from './listOfPorts';
+import Ports from '../json/listOfPorts';
 import Select from 'react-select';
-import '../css/inputs.css'
+import '../../css/inputs.css'
 
 const options = [];
 for (var i in Ports.ports){

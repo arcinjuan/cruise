@@ -43,6 +43,9 @@ span.day-number {
   font-size: 12px;
   color: #866005;
 }
+.loading{
+  margin-top:25vh;
+}
 
 .past-cruise-card  .visible-while-building{ display:none; }
 .card-builder .visible-while-viewing { display:none; }

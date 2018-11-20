@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import SavedCruises from './savedCruises';
 import CruiseList from './CruiseList';
-import { Route, Switch, NavLink} from "react-router-dom";
-import { withRouter } from 'react-router-dom'
+import { NavLink} from "react-router-dom";
 
 class PastCruisesList extends Component {
   constructor(props){
@@ -28,7 +25,7 @@ class PastCruisesList extends Component {
     return (
       <div>
         <div className="addNewDayIcon text-center small-12 columns">
-          <NavLink exact to="/add-day">
+          <NavLink exact to="/add-trip/create-trip">
             <i className="fas fa-plus-circle"></i><br />
             Add New Cruise
           </NavLink>
