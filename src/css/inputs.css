@@ -1,15 +1,17 @@
 /* Port Selection */
-.portSelection div{
+.portSelection div,
+.shipSelection div{
 	margin:0;
 	padding:0;
 	border:none;
 	color:#555;
 }
-.portSelection{
+.portSelection, .shipSelection{
 	padding-top:10px;
 	width:100%;
 }
-.portSelection div input[type="text"]{
+.portSelection div input[type="text"],
+.shipSelection div input[type="text"]{
 	background:#ccc;
 	border-bottom:none!important;
 	max-height:30px;
@@ -49,7 +51,7 @@
 	outline: none;
 }
 
-button.addCardButton{
+button{
   box-shadow: none!important;
   outline: none;
   background: #0f6ba0;
@@ -60,8 +62,11 @@ button.addCardButton{
   transition: background .3s ease;
 }
 
-button.addCardButton:hover{
+button:hover{
 	background:#168dd2;
+}
+button[disabled]{
+	background: #ccc;
 }
 
 .input-range__slider, .input-range__track--active {
@@ -69,3 +74,19 @@ button.addCardButton:hover{
     border: 1px solid #fab100!important;
 }
 
+.css-15k3avv{
+	border:1px solid white!important;
+	width:100vw!important;
+	left:-15px!important;
+	padding:20px!important;
+	position:absolute;
+}
+input[type="text"], input[type="text"]:focus{
+	border:none;
+	border-bottom:1px solid #ccc;
+	box-shadow:none;
+	margin-bottom:0;
+}
+input.form-field, .form-field{
+	border-bottom:1px solid #ccc;
+}

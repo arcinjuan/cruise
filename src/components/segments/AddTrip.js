@@ -1,48 +1,41 @@
 import React, { Component } from 'react';
-import SubmitButton from '../forms/AddNewDataButton'
+import SubmitButton from '../forms/AddNewDataButton';
+import AddTripForm from '../forms/AddTripForm';
+import AddDay from '../segments/AddDay';
+import Loading from '../segments/Loading';
+import {Route, Switch } from "react-router-dom";
 
 class AddTrip extends Component {
   constructor(props){
     super(props);
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.startCreatingTrip = this.startCreatingTrip.bind(this)
+    this.finsihCreatingTrip = this.finsihCreatingTrip.bind(this)
     this.state = {
       data: {
         tripName: "",
         url: "",
         cruiseLine: "",
         ship: "",
-        setSail: ""
+        setSail: "",
+        ports:[]
       }
     }
   }
-  handleChange (event) {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-        [name]: value
-    }, () => console.log(this.state));
+  startCreatingTrip(){
+    console.log('saved')
   }
-  handleSubmit(e){
-    e.preventDefault()
-    const dataObj = this.state
-    dataObj.map((key, index) => {
-      console.log(key, index)
-    })
+
+  finsihCreatingTrip(){
+    console.log('saved')
   }
 
   render() {
-    return (
-      <form >
-        <input type="text" name="tripName" placeholder="Enter a name for your trip" value={this.state.tripName} onChange={this.handleChange}/>
-        <input type="text" name="cruiseLine" placeholder="Enter a name for your trip" value={this.state.cruiseLine} onChange={this.handleChange}/>
-        <input type="text" name="ship" placeholder="Enter a name for your trip" value={this.state.ship}  onChange={this.handleChange}/>
-        <input type="text" name="setSail" placeholder="Enter a name for your trip" value={this.state.setSail} onChange={this.handleChange} />
-        <input type="submit" onClick={this.handleSubmit} />
-        
-      </form>
+    return (  
+          <Switch>
+            <Route path="/add-trip/create-trip" component={AddTripForm} /> 
+            <Route path="/add-trip/creating-trip" component={Loading} /> 
+            <Route path="/add-trip/add-ports" component={AddDay} />
+          </Switch>
     );
   }
 }

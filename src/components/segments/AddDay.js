@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "../css/tabs.css";
 import AddSeaDayForm from '../forms/AddSeaDayForm';
 import AddPortForm from '../forms/AddPortForm';
 import PortCard from '../cards/PortCard';
 import SeaDayCard from '../cards/SeaDayCard';
 import scrollToComponent from 'react-scroll-to-component';
 import { Link } from "react-router-dom";
+
+
+import "../../css/tabs.css";
 
 class AddDay extends Component {
   constructor(props){
