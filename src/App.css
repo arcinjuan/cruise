@@ -57,9 +57,13 @@ span.day-number {
   color:#333;
 }
 .addNewDayIcon a i{
-  color:#ffb100;
+  color:#c3c1ba;
   font-size:60px;
   margin-top:20px;
+  transition: color .35s ease;
+}
+.addNewDayIcon a i:hover{
+  color:#ffb100;
 }
 .addNewDayIcon{
   border-bottom: 1px solid #ccc;
@@ -69,4 +73,8 @@ span.day-number {
 
 h4.text-center{
   font-weight:;
+}
+
+.add-trip-form{
+  margin-top:100px;
 }

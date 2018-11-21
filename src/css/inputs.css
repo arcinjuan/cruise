@@ -6,6 +6,7 @@
 	border:none;
 	color:#555;
 }
+
 .portSelection, .shipSelection{
 	padding-top:10px;
 	width:100%;
@@ -34,21 +35,11 @@
 	visibility:hidden;
 }
 
-.DayPickerInput{
-	margin-top:15px;
-	width:100%;
-}
 
-.DayPickerInput input{
-	border: none;
-	color:#555;
-	width:100%;
-	box-shadow: none;
-	outline: none;
-}
-.DayPickerInput input:focus, .portSelection div input[type="text"]:focus{
+.portSelection div input[type="text"]:focus{
 	box-shadow: none!important;
 	outline: none;
+	padding:0 5px;
 }
 
 button{
@@ -86,7 +77,28 @@ input[type="text"], input[type="text"]:focus{
 	border-bottom:1px solid #ccc;
 	box-shadow:none;
 	margin-bottom:0;
+	padding:0 5px;
+	color:#555;
 }
 input.form-field, .form-field{
 	border-bottom:1px solid #ccc;
+	padding:0 5px;
+	color:#555;
+}
+.DayPickerInput{
+	width:100%;
+}
+.DayPickerInput input{
+	border:none;
+	border-bottom:1px solid #ccc;
+	box-shadow:none;
+	margin-bottom:0;
+	margin-top:10px;
+	padding:0 5px 10px;
+	color:#555;
+	width:100%;
+}
+.DayPickerInput input:focus{
+	box-shadow: none!important;
+	outline: none;
 }
