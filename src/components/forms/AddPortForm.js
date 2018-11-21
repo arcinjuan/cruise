@@ -10,6 +10,7 @@ class AddPortForm extends Component {
     this.grabDate = this.grabDate.bind(this);
     this.grabActivity = this.grabActivity.bind(this);
     this.grabTime = this.grabTime.bind(this);
+    this.saveData = this.saveData.bind(this);
 
     this.state = {
       selectedDay: undefined,
@@ -17,7 +18,8 @@ class AddPortForm extends Component {
       selectedTime: '08:00AM - 5:00PM',
       dateFieldValid: false,
       activityFieldValid: false,
-      formValid: false
+      formValid: false,
+      tripInfo:{}
     };
   }
 
@@ -47,7 +49,8 @@ class AddPortForm extends Component {
           <TimeField grabTime={this.grabTime} />
         </div>
         <nav className="small-12 columns card-nav text-center">
-          <button className="addCardButton" type="submit">Add Port</button>
+          <button className="addCardButton" type="submit">Add Port</button><br />
+          <button className="addCardButton" onClick={this.saveData}>save</button>
         </nav>
       </form>
     );
@@ -81,6 +84,9 @@ class AddPortForm extends Component {
 
   grabTime(schedule){
     this.setState({selectedTime: schedule})
+  }
+  saveData(){
+
   }
 
 }

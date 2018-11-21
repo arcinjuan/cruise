@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { fadeIn, fadeOut } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
-// import loadingText from '../forms/LoadingText';
 import loading from './loading.gif';
 
 const styles = {

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import AddSeaDayForm from '../forms/AddSeaDayForm';
 import AddPortForm from '../forms/AddPortForm';
 import PortCard from '../cards/PortCard';
 import SeaDayCard from '../cards/SeaDayCard';
@@ -22,6 +20,9 @@ class AddDay extends Component {
   componentDidUpdate(){
     return scrollToComponent(this.bottomForm);
   }
+  componentWillMount(){
+    console.log(this.props.receiveData())
+  }
   render() {
     return (
       <div>
@@ -34,28 +35,11 @@ class AddDay extends Component {
             }
           })}
         </div>
-        <Tabs>
-          <TabList>
-            <Tab>Add Port</Tab>
-            <Tab>Add Sea Day</Tab>
-            <Tab><i className="fas fa-save"></i></Tab>
-            <Tab><i className="fas fa-home"></i></Tab>
-          </TabList>
-          <TabPanel>
-            <AddPortForm addDay={this.addCard}/>
-          </TabPanel>
-          <TabPanel>
-            <AddSeaDayForm addDay={this.addCard}/>
-          </TabPanel>
-          <TabPanel>
-            <p>Save</p>
-          </TabPanel>
-          <TabPanel>
-            <div className="small-12 columns cancelAddDay text-center">
-              <Link to="/">Confirm Cancel and Return Home</Link> <br />(all changes will be lost!)
-            </div>
-          </TabPanel>
-        </Tabs>
+        <i className="fas fa-save"></i>
+        <i className="fas fa-home"></i>
+        <AddPortForm addDay={this.addCard}/>
+
+
         <section ref={(section) => { this.bottomForm = section; }}></section>
       </div>
     );

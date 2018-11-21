@@ -4,8 +4,8 @@ import CruiseShips from '../json/cruiseships'
 import Select from 'react-select';
 import '../../css/inputs.css'
 
-const cruiseLineOptions = [];
-const cruiseShipOptions = []
+let cruiseLineOptions = [];
+let cruiseShipOptions = []
 
 for (var i in CruiseShips.cruiseLines){
 	const cruiseline = CruiseShips.cruiseLines[i].cruiseline;
@@ -33,10 +33,11 @@ export default class ShipsSelect extends Component {
   		cruiseShipOptions.push({value: cruise.ships[ship], label: cruise.ships[ship]})
   	}
   	this.setState({showCruisShipSelection: true});
-  	console.log(this.state.showCruisShipSelection)
 
   }
   handleCruiseLineChange(selectedCruiseLine) {
+    cruiseShipOptions = []
+    this.setState({selectedCruiseShip: null})
   	this.setState({ selectedCruiseLine }, this.grabCruiseShips(selectedCruiseLine));
   }
   handleCruiseShipChange(selectedCruiseShip) {
@@ -59,7 +60,7 @@ export default class ShipsSelect extends Component {
 	        onChange={this.handleCruiseLineChange}
 	        options={cruiseLineOptions}
 	        className="shipSelection small-12 columns  form-field"
-		      placeholder="Enter a CruiseLine"
+		      placeholder="What cruise line are you sailing with?"
 	      /> 
 	    </div>
 
@@ -72,14 +73,14 @@ export default class ShipsSelect extends Component {
 		        onChange={this.handleCruiseLineChange}
 		        options={cruiseLineOptions}
 		        className="shipSelection form-field"
-		        placeholder="Select a CruiseLine"
+		        placeholder="What cruise line are you sailing with?"
 		      />
 		      <Select
 		        value={selectedCruiseShip}
 		        onChange={this.handleCruiseShipChange}
 		        options={cruiseShipOptions}
 		        className="shipSelection form-field"
-		      	placeholder="Enter a Ship"
+		      	placeholder="What Ship will you be on?"
 		      />
 		      
 		      
