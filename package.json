@@ -1,22 +1,14 @@
 {
-  "name": "cruise",
+  "name": "cruisefolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "moment": "^2.22.2",
-    "radium": "^0.25.0",
     "react": "^16.6.3",
-    "react-animations": "^1.0.0",
-    "react-day-picker": "^7.2.4",
     "react-dom": "^16.6.3",
-    "react-input-range": "^1.3.0",
-    "react-router-dom": "^4.3.1",
+    "react-redux": "^5.1.1",
+    "react-redux-form": "^1.16.10",
     "react-scripts": "2.1.1",
-    "react-scroll-to-component": "^1.0.2",
-    "react-select": "^2.1.1",
-    "react-tabs": "^2.3.0",
-    "react-time-range": "^1.0.4",
-    "react-time-range-slider": "^1.0.2"
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
