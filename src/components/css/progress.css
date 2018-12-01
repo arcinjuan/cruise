@@ -1,0 +1,31 @@
+.steps{
+	display:inline-block;
+	position:relative;
+	height:55px;
+	margin-bottom: 40px;
+}
+.step{
+	display: inline-block;
+  padding: 15px;
+  height: 50px;
+  color: #e98100;
+  z-index: 1;
+  position: relative;
+}
+.step-progress{
+  background: #ffe4c3;
+  height: 35px;
+  border-radius:5px;
+  width: 50%;
+  position: absolute;
+  bottom: 10px;
+  z-index: 0;
+  transition: left .5s cubic-bezier(0,0,.4,1.47);
+}
+
+.first-step .step-progress{
+	left:0;
+}
+.second-step .step-progress{
+	left:50%;
+}
