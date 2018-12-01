@@ -1,0 +1,145 @@
+/* Port Selection */
+.Selection{
+	display:inline-block;
+	min-width:50%;
+}
+.dropShadow{
+	-webkit-box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+}
+.Selection:focus, .Selection *:focus,.Selection *:active, .select-field__input{
+	outline:none!important;
+	border:none!important;
+}
+.select-field__control{
+	border:none!important;
+	background:transparent;
+	max-height:30px!important;
+	padding:0!important;
+	margin:0!important;
+}
+.select-field__control--is-focused{
+		border:none!important;
+		background:#000;
+		box-shadow:none!important;
+	}
+.select-field__value-container{
+	max-height:30px!important;
+	padding:0!important;
+	margin:0!important;
+	background:transparent!important;
+}
+.select-field__value-container div, 
+.select-field__value-container input{
+	max-height:30px!important;
+	background:transparent!important;
+	padding:0!important;
+	margin:0!important;
+}
+.select-field__indicators{
+	display:none!important;
+}
+.portSelection div,
+.shipSelection div{
+}
+.portSelection, .shipSelection{
+}
+.portSelection div input[type="text"],
+.shipSelection div input[type="text"]{
+}
+.field{
+	padding:15px 0 0;
+	border-bottom: 1px solid #ccc;
+}
+.field span{
+		display:inline-block;
+	margin-right:20px;
+	font-size:12px;
+	color:#555;
+
+	width:100px;
+}
+#dateSelection, #portSelection{
+	border-bottom:1px solid #ccc;
+}
+.css-2o5izw{
+	border:none!important;
+}
+.form-select-field{
+	margin-top:20px;
+}
+.css-1wy0on6{
+}
+.portSelection div input[type="text"]:focus{
+}
+.shipSelect-enter{
+
+}
+.shipSelect-enter {
+  opacity: 0.01;
+}
+input:-webkit-autofill{
+	background-color:#fff;
+	font-weight:100;
+}
+
+.shipSelect-enter..shipSelect-enter-active {
+  opacity: 1;
+  transition: 700ms;
+}
+
+
+.input-range__slider, .input-range__track--active {
+  background: #fab100!important;
+  border: 1px solid #fab100!important;
+}
+input[type="text"], input[type="text"]:focus{
+	border:none;
+	box-shadow:none;
+	margin-bottom:0;
+	padding:0;
+	color:#555;
+	height:30px;
+	max-height:30px;
+}
+
+.DayPickerInput{
+	width:100%;
+}
+.DayPickerInput input{
+	border:none;
+	box-shadow:none;
+	margin-bottom:0;
+	color:#555;
+	width:100%;
+	height:30px;
+	max-height:30px;
+}
+.DayPickerInput input:focus{
+	box-shadow: none!important;
+	outline: none;
+}
+input[type="submit"]{
+  background: #f1800b;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 35px;
+  border:none;
+  transition: background 1.5s ease;
+}
+input[type="submit"]:disabled{
+  background: white;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 35px;
+}
+
+.time-slot-container{
+	position: relative;
+}
+input[type="radio"]{
+	margin-left:20px;
+}
+
+

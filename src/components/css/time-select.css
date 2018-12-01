@@ -1,0 +1,61 @@
+.single-time-slot .dropdowns{
+	display:inline-block;
+}
+.single-time-input-select{
+	max-width:20px;
+	max-height:30px;
+	height:30px;
+	display:inline-block;
+	margin:2px;
+	overflow:visible;
+	position:relative;
+}
+.single-time-input-select ::placeholder{
+	color:#aaa;
+	-webkit-font-smoothing: auto;
+	font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.single-time-input-select.ampm{
+	max-width:25px;
+	width: 25px;
+}
+.single-time-input-select input, .single-time-input-select input:active,
+.single-time-input-select input:focus{
+	font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	padding:0;
+	overflow:visible;
+	color: transparent;
+	text-shadow: 0 0 0 black;
+	height:25px;
+	text-align:center;
+	background:transparent;
+	border:none;
+}
+.single-time-input-select .placeholder{
+	color:#808080;
+	-webkit-font-smoothing: auto;
+	font-weight:100;
+	font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+}
+.time-slot-dropdown{
+	position:absolute;
+	left:-10px;
+}
+.time-slot-dropdown ul{
+	list-style: none;
+	margin:0;
+	padding:5px 0;
+	background:white;
+	width:40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.time-slot-dropdown ul li{
+	text-align:center;
+	display:block;
+}
+.time-slot-dropdown ul li:hover{
+	background:#ccc;
+	cursor: pointer;
+}

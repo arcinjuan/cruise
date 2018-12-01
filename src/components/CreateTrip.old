@@ -1,0 +1,58 @@
+// ./components/UserForm.js
+
+import React from 'react';
+import SavedCruisesList from './savedCruisesList'
+import { Control, Form, Field, actions } from 'react-redux-form';
+import { connect } from 'react-redux';
+
+const formData = {test: ''}
+class createTrip extends React.Component {
+
+  handleSubmit(newTrip) {
+    console.log(newTrip)
+    // this.props.createTrip(newTrip)
+  }
+
+  render() {
+    return (
+      <div className="create-trip-form">
+        <Form
+          model="formDataReducer"
+          onSubmit={(data) => this.handleSubmit(data)}
+        >
+          <Field model="formDataReducer.dayType">
+            <label><input type="radio" value="PortDay" checked="true"/> Port Stop</label>
+            <label><input type="radio" value="SeaDay"/> Sea Day</label>
+          </Field>
+          <label htmlFor="formDataReducer.tripName">Trip Name:</label><br />
+          <Control.text model="formDataReducer.tripName" id="formDataReducer.tripName" /><br />
+
+          <button type="submit">
+            Finish registration!
+          </button> <br />
+        </Form>
+
+        
+
+        <SavedCruisesList />
+
+      </div>
+    );
+  }
+}
+
+// create props out of data in Store
+const mapStateToProps = state => {
+	return{
+		cruise: state.mainReducer.pastTrips.cruises
+	}
+}
+
+// send data via dispatch
+const mapDispatchToProps = dispatch => {
+	return{
+    createTrip: (value) => dispatch({type: 'CREATE_NEW_TRIP', payload: value})
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(createTrip);
