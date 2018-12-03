@@ -15,7 +15,6 @@ class AmPmDropDown extends Component {
     	ampmValue: 'am',
       placeholder: 'placeholder'
     }
-    console.log(this.props.hour)
   }
   digitSelect(digit){
     this.props.updateAmPm(digit)

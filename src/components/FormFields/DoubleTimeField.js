@@ -39,7 +39,7 @@ class DoubleTimeField extends Component {
 // send data via dispatch
 const mapDispatchToProps = dispatch => {
   return{
-    setTimeMessage: () => dispatch({type: 'SET_TIME_MESSAGE', payload: 2 })
+    setTimeMessage: () => dispatch({type: 'SET_TIME_MESSAGE', payload: 'portDay' })
   }
 }
 

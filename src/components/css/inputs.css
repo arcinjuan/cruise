@@ -51,6 +51,7 @@ box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
 .field{
 	padding:15px 0 0;
 	border-bottom: 1px solid #ccc;
+	color: #808080;
 }
 .field span{
 		display:inline-block;
@@ -142,4 +143,25 @@ input[type="radio"]{
 	margin-left:20px;
 }
 
+.set-day{
+  display: inline-block;
+  padding: 3px 15px;
+  background: #fbf9f9;
+  border-right: 1px solid #929292;
+  border-bottom: 1px solid #929292;
+  border-top: 1px solid #f1efef;
+  border-left: 1px solid #f1efef;
+  margin: 0 25px 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.set-day.for-sea-day.sea-day, .set-day.for-last-day.last-day{
+		background: #f1f1f1;
+    border-right: none;
+    border-bottom: none;
+    border-top: 2px solid #b9b7b7;
+    border-left: 2px solid #b9b7b7;
+    color: #a2a2a2;
+}
 
