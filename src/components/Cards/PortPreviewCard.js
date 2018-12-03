@@ -5,21 +5,13 @@ class PortPreviewCard extends Component {
   constructor(props){
     super(props);
     this.removeCard = this.removeCard.bind(this);
-    console.log(this.props.newCruisePort)
   }
-  handleTimeMessage(){
-    if(this.props.portSegment === 1){
-      return `${this.props.timeA}`
-    } 
-    else if(this.props.portSegment === 2){
-      return `${this.props.timeA} - ${this.props.timeB}`
-    }
-    else if(this.props.portSegment === 3){
-      return `${this.props.timeB}`
-    }
+  componentDidMount(){
+    console.log(this.props.timeMessage)
   }
   render() {
     let day = this.props.ArrayPortIndex + 1
+    let newSchedule = this.props.newCruisePort[this.props.ArrayPortIndex].schedule
     return (
       <div className="small-12 columns card" id={`card-${this.props.ArrayPortIndex}`}>
         <div className="day">
@@ -38,7 +30,7 @@ class PortPreviewCard extends Component {
           <i className="fas fa-map-marker-alt"></i> {this.props.newCruisePort[this.props.ArrayPortIndex].port}
         </div>
         <div className="small-12 columns port-schedule"> 
-           <i className="fas fa-clock"></i> {this.handleTimeMessage()} 
+           <i className="fas fa-clock"></i> {newSchedule} 
         </div>
 
       </div>
@@ -54,11 +46,12 @@ class PortPreviewCard extends Component {
 const mapStateToProps = state => {
   return{
     newCruisePort: state.newCruiseData.ports,
-    portSegment: state.newCruiseData.portSegment,
     ship: state.newCruiseData.ship,
     day: state.newCruiseData.cruiseDay,
     timeA: state.newCruiseData.startTime.fullTime,
     timeB: state.newCruiseData.endTime.fullTime,
+    seaDay: state.newCruiseData.seaDay,
+    timeMessage: state.newCruiseData.schedule
   }
 }
 

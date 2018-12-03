@@ -5,7 +5,6 @@ import PortPreviewCard from '../../Cards/PortPreviewCard'
 
 class PortBuilderPreview extends React.Component {
   render() {
-  	const cruiseDay = `${this.props.month}/${this.props.day}/${this.props.year}`
     return (
       <div className="port-builder-preview">
       	<h3 className="text-center">{this.props.newCruise.tripName}</h3>

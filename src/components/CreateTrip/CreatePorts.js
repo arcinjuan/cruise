@@ -18,28 +18,22 @@ class CreatePorts extends React.Component {
   componentDidMount(){
     if(window.location.href.indexOf('step-two') > -1) {
       this.props.setStepProgress()
-      console.log(this.props.newCruise)
     }
   }
   saveTrip(e) {
   	e.preventDefault()
-  	console.log('click')
   	this.props.saveTrip()
   }
   render() {
     return (
       <div className="add-ports-form">
-
-
         <NewPortPreview />
         <hr />
-
-          <Switch>
-            <Route path="/new-trip/step-two/start-trip" component={PortCardBuilder} />
-            <Route path="/new-trip/step-two/build-trip" component={PortCardBuilder} />
-            <Route path="/new-trip/step-two/end-trip" component={LastPortCardBuilder} />
-          </Switch>
- 
+        <Switch>
+          <Route path="/new-trip/step-two/start-trip" component={PortCardBuilder} />
+          <Route path="/new-trip/step-two/build-trip" component={PortCardBuilder} />
+          <Route path="/new-trip/step-two/end-trip" component={LastPortCardBuilder} />
+        </Switch>
       </div>
     );
   }

@@ -21,7 +21,6 @@ class FirstPortCardBuilder extends React.Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    let finalSchedule = `${this.props.hour}:${this.props.min} ${this.props.ampm}`
     let newPort = {date: `${this.props.month}/${this.props.day}/${this.props.year}`, port: this.state.port}
     let sailTime = `${this.props.newCruise.ship} departs at ${this.props.newCruise.finalSchedule}`
     this.props.savePort(newPort);
@@ -46,7 +45,7 @@ class FirstPortCardBuilder extends React.Component {
             <SingleTimeField />
           </div>
           <div className="text-center">
-            <input type="submit" value="Add Port"/>
+            <input type="submit" value="Add Port" disabled={isEnabled}/>
           </div>
         </form>
       );

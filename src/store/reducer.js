@@ -1,6 +1,7 @@
 import savedCruises from './savedCruises';
 
 const initialState = {
+	// sample whileI build
 	newCruiseData: {
 		cruiseLine: "Royal Caribbean International",
 		id: "Juan-And-Mirna-Go-To-Asia",
@@ -22,8 +23,8 @@ const initialState = {
 			ampm:"pm",
 			fullTime:"10:00 pm"
 		},
-		fullTime:'',
-		portSegment: 1
+		schedule:'test',
+		portSegment: 'portDay'
 	},
 	activeCruise: null,
 	pastTrips: savedCruises(),
@@ -36,7 +37,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 
 	if(action.type === 'CREATE_NEW_TRIP'){
-		console.log(action.payload)
 		return {
 			...state,
 			newCruiseData: action.payload
@@ -44,6 +44,8 @@ const reducer = (state = initialState, action) => {
 	}
 
 	if(action.type === 'SAVE_NEW_PORT'){
+		console.log(...state.newCruiseData.ports)
+		console.log(action.payload)
 		
 		return {
 			...state,
@@ -92,7 +94,6 @@ const reducer = (state = initialState, action) => {
 	}
 
 	if(action.type === 'UPDATE_MIN_A'){
-		console.log('changed')
 		const hour = state.newCruiseData.startTime.hour
 		const ampm = state.newCruiseData.startTime.ampm
 		const newTime =  hour + ':' + action.payload + ' ' + ampm
@@ -110,7 +111,6 @@ const reducer = (state = initialState, action) => {
 	}
 
 	if(action.type === 'UPDATE_AMPM_A'){
-		console.log('changed')
 		const min = state.newCruiseData.startTime.min
 		const hour = state.newCruiseData.startTime.hour
 		const newTime = hour + ':' + min + ' ' + action.payload
@@ -162,7 +162,6 @@ const reducer = (state = initialState, action) => {
 	}
 
 	if(action.type === 'UPDATE_AMPM_B'){
-		console.log('changed')
 		const min = state.newCruiseData.endTime.min
 		const hour = state.newCruiseData.endTime.hour
 		const newTime = hour + ':' + min + ' ' + action.payload
